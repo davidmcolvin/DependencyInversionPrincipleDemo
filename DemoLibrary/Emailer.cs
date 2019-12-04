@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DemoLibrary
 {
-  public class Emailer
+  public class Emailer : IMessageSender
   {
-    public void SendEmail(Person owner, string v)
+    public void SendMessage(IPerson owner, string v)
     {
       Console.WriteLine($"Simulating sending an email to {owner.EmailAddress}");
     }
